@@ -1,0 +1,15 @@
+header{
+    display: flex;
+    padding: 5px 1rem;
+    justify-content: space-between;
+    background-color: #252728;
+    border-bottom: 1px solid #383a3b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header img{
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+.activity{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 5px;
+}
+.activity:hover{
+    background-color: #333334;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.activity-user{
+    position: relative;
+}
+.activity span{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#activity-user{
+    width: 64px;
+    display: block;
+}
+#activity-icon{
+    width: 16px;
+    padding: 5px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+}

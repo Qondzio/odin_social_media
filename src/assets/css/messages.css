@@ -1,0 +1,24 @@
+.message{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 5px;
+    align-items: center;
+}
+.message:hover{
+    background-color: #333334;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.message span{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.message #message-user{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.message #message-text{
+    color: #919498;
+}

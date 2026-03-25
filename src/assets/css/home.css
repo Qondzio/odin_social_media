@@ -1,0 +1,146 @@
+.home{
+    background-color: #1c1c1d;
+    min-height: calc(100vh - 51px);
+    display: flex;
+    justify-content: center;
+    color: #e2e5e9;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    min-width: 250px;
+    position: sticky;
+    top:52px;
+    height: fit-content;
+}
+.sidebar span{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+.sidebar span:hover{
+    background-color: #333334;
+    transform: translateX(-5px);
+    cursor: pointer;
+}
+.sidebar span img{
+    width: 28px;
+    height: auto;
+}
+.sidebar span p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.home-main{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+.posts-header, .title{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem 0;
+    border-left: 1px solid #383a3b;
+    border-right: 1px solid #383a3b;
+    border-bottom: 1px solid #383a3b;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 1rem;
+    background-color: #252728;
+    font-weight: 500;
+}
+.posts-header span{
+    cursor: pointer;
+}
+.posts-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.post{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #252728;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px; 
+}
+.post-author, .post-reactions span{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.post-author img{
+    width: 2rem;
+}
+.author-info{
+    display: flex;
+    flex-direction: column;
+}
+.author-info h5{
+    margin: 0;
+}
+.post-photo{
+    margin: 0 -10px;
+}
+.post-photo img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.post-reactions{
+    display: flex;
+    gap: 2rem;
+}
+.post-reactions span{
+    gap: 5px;
+    padding: 5px;
+    margin: -5px;
+}
+.post-reactions span:hover{
+    background-color: #3b3d3e;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.post-reactions span img{
+    width: 24px;
+}
+.author-info p{
+    font-size: 0.7rem;
+}
+#active{
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #50a9e0;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 52px;
+    max-height: 680px;
+    overflow-y: auto;
+}
+.contact{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+}
+.contact:hover{
+    background-color: #333334;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact img{
+    width: 28px;
+}

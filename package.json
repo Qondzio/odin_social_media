@@ -1,0 +1,54 @@
+{
+  "name": "odin_social_media",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.5.0",
+    "@prisma/client": "^7.5.0",
+    "@quixo3/prisma-session-store": "^3.1.19",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "express-validator": "^7.3.1",
+    "nodemailer": "^8.0.3",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.20.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router": "^7.13.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "prisma": "^7.5.0",
+    "vite": "^7.3.1"
+  },
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qondzio/odin_social_media.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Qondzio/odin_social_media/issues"
+  },
+  "homepage": "https://github.com/Qondzio/odin_social_media#readme",
+  "description": ""
+}

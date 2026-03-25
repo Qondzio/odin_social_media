@@ -1,0 +1,146 @@
+@font-face{
+    font-family: GoogleSans;
+    src:url(../fonts/GoogleSans.ttf)
+}
+html, body{
+    font-family: "GoogleSans";
+    margin: 0;
+}
+.login_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #dee2e8;
+    border-bottom: 1px solid #dee2e8;
+    min-width: 450px;
+    padding: 3rem;
+}
+#website-logo{
+    width: 40px;
+    height: auto;
+    margin-top: 20px;
+}
+main form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+main form p{
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+main form span{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.button_signup{
+    margin-top: 20px;
+}
+main input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    outline: none;
+    font-size: 12px;
+}
+main input:hover{
+    border: 1px solid rgb(112, 112, 112);
+
+}
+main input:focus{
+    border: 1px solid #6c4df7;
+}
+#loginButton{
+    background-color: #6c4df7;
+    border: none;
+    padding: 10px 0;
+    color: white;
+    border-radius: 20px;
+}
+#loginButtonLoading{
+    background-color: #6c4df7;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 0;
+}
+#loginButton:hover{
+    background-color: #512df1;
+}
+#forgotpswButton{
+    border: none;
+    background-color: white;
+    padding: 10px 0;
+    border-radius: 20px;
+}
+#forgotpswButton:hover{
+    background-color: #f2f2f2;
+}
+button{
+    cursor: pointer;
+}
+.button_signup{
+    background-color: white;
+    border:1px solid #6c4df7;
+    border-radius: 20px;
+    padding: 10px 0;
+}
+.button_signup:hover{
+    background-color: #f2f2f2;
+}
+.login_left{
+    display: flex;
+    border-right: 1px solid #dee2e8;
+    border-bottom: 1px solid #dee2e8;
+    width: 100%;
+    padding: 2rem;
+}
+.login_left_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.login_left_text span{
+    color: #6c4df7;
+}
+.login_left_text img{
+    height: auto;
+    width: 50px;
+}
+.login_left_image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.login_left_image img{
+    height: auto;
+    max-width: 80%;
+}
+main{
+    display: flex;
+}
+.p-error{
+    color: red;
+    font-size: 0.8rem;
+}
+.p-message{
+    color: #0ed840;
+    font-size: 0.8rem;
+}
+.error-div, .message-div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.error-div img, .message-div img{
+    width: 16px;
+    height: 16px;
+}
+#loading-icon{
+    width: 20px;
+    height: 20px;
+}

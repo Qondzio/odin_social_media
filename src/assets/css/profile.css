@@ -1,0 +1,104 @@
+.profile{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+.title{
+    display: flex;
+    justify-content: left;
+    padding-left: 1rem;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.title p, .profile-info-details p, .profile-posts-title p{
+    font-size: 1rem;
+}
+.profile-info{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #252728;
+}
+.profile-info img{
+    width: 200px;
+}
+.profile-info-details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 0.2rem;
+}
+.profile-info-details #name p{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.profile-info-details span{
+    display: flex;
+    gap: 4px;
+}
+.popularity{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+.popularity span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.popularity span #number{
+    font-weight: 700;
+}
+.actions{
+    display: flex;
+    margin-top: 0.7rem;
+    width: 85%;
+    gap: 10px;
+}
+.actions button{
+    outline: none;
+    border-radius: 20px;
+}
+#follow{
+    background-color: #6c4df7;
+    border: none;
+    padding: 10px 0;
+    color: white;
+    border-radius: 20px;
+    width: 100%;
+}
+#follow:hover{
+    background-color: #512df1;
+}
+.actions #comment img{
+    width: 22px;
+}
+.actions #comment:hover{
+    background-color: white;
+}
+.actions #comment:hover img{
+    filter: invert(1);
+}
+.actions #comment{
+    border: 1px solid white;
+    background-color: transparent;
+    padding: 0 15px;
+}
+.profile-posts{
+    display: flex;
+    flex-direction: column;
+}
+.profile-posts-title{
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    padding-left: 1rem;
+    border-radius: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #383a3b;
+    background-color: #252728;
+    margin-bottom: 1rem;
+}
