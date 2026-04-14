@@ -1,28 +1,31 @@
-.activity{
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    margin-top: 5px;
-}
-.activity:hover{
-    background-color: #333334;
-    cursor: pointer;
-    border-radius: 10px;
-}
-.activity-user{
-    position: relative;
-}
-.activity span{
+.activity-info{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 5px;
 }
-#activity-user{
+.activity-info p{
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.activity-box{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 51px - 53px);
+    overflow-y: auto;
+}
+.activity-box #activity-user{
+    border-radius: 50%;
     width: 64px;
-    display: block;
+    height: 64px;
+    object-fit: cover;
+    object-position: center;
 }
 #activity-icon{
     width: 16px;
+    height: 16px;
+}
+.activity-user .icon-background{
     padding: 5px;
     border-radius: 50%;
     position: absolute;

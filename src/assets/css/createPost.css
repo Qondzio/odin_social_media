@@ -1,6 +1,8 @@
 #post-form{
     padding: 2rem 1rem;
     background-color: #252728;
+    max-width: 600px;
+    box-sizing: border-box;
 }
 #post-form textarea{
     background-color: transparent;
@@ -13,6 +15,7 @@
     font-size: 0.9rem;
 }
 .create-post-buttons{
+    max-height: 67px;
     padding: 1rem;
     background-color: #252728;
     display: flex;
@@ -37,8 +40,48 @@
     padding: 10px 20px;
     color: white;
     border-radius: 20px;
+    width: 71px;
+    height: 35px;
 }
 #text-limit{
     font-size: 0.9rem;
 }
-    
+.image-preview{
+    background-color: #252728;
+    padding: 1rem;
+}
+.image-preview img{
+    width: 200px;
+    height: auto;
+
+}
+.image-preview #image-preview{
+    position: relative;
+}
+.image-preview #remove-icon{
+    background-color: #1c1c1d;
+    width: 15px;
+    height: auto;
+    padding: 0.4rem;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-60%, -40%);
+    cursor: pointer;
+}
+.image-preview #remove-icon:hover{
+    filter: invert(1);
+}
+#send-loading{
+    background-color: #6c4df7;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    width: 71px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

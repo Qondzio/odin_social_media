@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import {UserProvider} from './userProvider.jsx'
 import Login from './login.jsx'
 import Header from './header.jsx'
 import SignUp from './signup.jsx'
@@ -8,13 +9,12 @@ import ResetPassword from './reset.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import ErrorPage from './error.jsx'
 import Home from './home.jsx'
-import Posts from './posts.jsx'
 import Profile from './profile.jsx'
-import PostsHeader from './postsHeader.jsx'
 import CreatePost from './createPost.jsx'
 import Likes from './likes.jsx'
 import Messages from './messages.jsx'
 import FindUsers from './findUsers.jsx'
+import HomePosts from './homePosts.jsx'
 
 const router=createBrowserRouter([
   {
@@ -36,64 +36,61 @@ const router=createBrowserRouter([
   {
     path: '/home',
     element: (
-      <>
+      <UserProvider>
         <Header/>
         <Home content={
-          <>
-            <PostsHeader/>
-            <Posts/>
-          </>
-        } />
-      </>
+          <HomePosts/>
+        }/>
+      </UserProvider>        
     )
   },
   {
     path: '/user/:userId',
     element: (
-      <>
+      <UserProvider>
         <Header/>
         <Home content={
           <>
-            <Profile content={<Posts/>}/>
+            <Profile/>
           </>
         } />
-      </>
+      </UserProvider>
     )
   },
   {
     path: '/create',
     element:(
-      <>
+      <UserProvider>
         <Header/>
         <Home content={<CreatePost/>}/>
-      </>
+      </UserProvider>
     )
   },
   {
     path: '/likes',
     element:(
-      <>
+      <UserProvider>
         <Header/>
         <Home content={<Likes/>}/>
-      </>
+      </UserProvider>
     )
   },
   {
-    path: '/messages',
+    path: '/messages/:messageId?',
     element:(
-      <>
+      <UserProvider>
         <Header/>
         <Home content={<Messages/>}/>
-      </>
+      </UserProvider>
     )
   },
   {
     path: '/find-users',
     element:(
-      <>
+      <UserProvider>
         <Header/>
         <Home content={<FindUsers/>}/>
-      </>
+      </UserProvider>
     )
   },
   {

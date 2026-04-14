@@ -5,7 +5,7 @@
     padding: 1rem;
     justify-content: center;
 }
-.search #search-icon{
+.search #search-icon, #go-back-icon{
     width: 24px;
 }
 .search form{
@@ -20,4 +20,38 @@
     color: white;
     width: 100%;
     box-sizing: border-box;
+}
+.found-user{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 5px;
+    align-items: center;
+}
+.found-user img{
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    object-position: center;
+}
+.found-user span{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.found-user #founded-user-name{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.found-user #founder-user-followers{
+    color: #919498;
+}
+.found-user:hover{
+    background-color: #333334;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#go-back-icon{
+    cursor: pointer;
 }

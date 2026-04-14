@@ -19,13 +19,29 @@ model Session {
 }
 
 model Users {
-  id          Int                @id @default(autoincrement())
+  id          Int       @id @default(autoincrement())
   name        String
   lastName    String
   birthDate   String
-  createdAt   DateTime           @default(now())
+  createdAt   DateTime  @default(now())
+  avatarUrl   String?
 
   credentials UsersCredentials?
+
+  posts       Post[]
+  comments    Comment[]
+  likes       Like[]
+
+  commentLikes CommentLike[] @relation("UserCommentLikes")  // <-- explicitly match the relation name
+
+  followers   Follow[] @relation("followers")
+  following   Follow[] @relation("following")
+
+  messagesSent Message[] @relation("sentMessages")
+  conversations ConversationParticipant[]
+
+  notificationsReceived Notification[] @relation("notificationsReceived")
+  notificationsSent     Notification[] @relation("notificationsSent")
 }
 
 model UsersCredentials {
@@ -36,5 +52,134 @@ model UsersCredentials {
   resetToken   String?   @unique
   tokenExpiry  DateTime?
 
-  user         Users      @relation(fields: [userId], references: [id])
+  user         Users     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Post {
+  id        Int       @id @default(autoincrement())
+  content   String
+  imageUrl  String?
+  createdAt DateTime  @default(now())
+
+  userId    Int
+  user      Users     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  comments  Comment[]
+  likes     Like[]
+
+  
+  notifications Notification[] @relation("postNotifications")
+
+  @@index([userId])
+}
+
+
+model Comment {
+  id        Int       @id @default(autoincrement())
+  content   String
+  createdAt DateTime  @default(now())
+
+  userId    Int
+  postId    Int
+  parentId  Int?
+
+  user      Users   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  post      Post    @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  parent    Comment?       @relation("CommentReplies", fields: [parentId], references: [id])
+  replies   Comment[]      @relation("CommentReplies")
+  commentLikes CommentLike[] @relation("CommentCommentLikes") // <-- explicitly match relation name
+
+  notifications Notification[] @relation("commentNotifications")
+
+  @@index([postId])
+  @@index([parentId])
+}
+
+model Like {
+  userId Int
+  postId Int
+
+  user   Users @relation(fields: [userId], references: [id], onDelete: Cascade)
+  post   Post  @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@id([userId, postId])
+  @@index([postId])
+}
+
+model Follow {
+  followerId  Int
+  followingId Int
+
+  follower Users @relation("following", fields: [followerId], references: [id], onDelete: Cascade)
+  following Users @relation("followers", fields: [followingId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@id([followerId, followingId])
+  @@index([followingId])
+}
+
+model Conversation {
+  id        Int       @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  participants ConversationParticipant[]
+  messages     Message[]
+}
+
+model ConversationParticipant {
+  conversationId Int
+  userId         Int
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  user         Users        @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([conversationId, userId])
+}
+
+model Message {
+  id             Int       @id @default(autoincrement())
+  content        String
+  createdAt      DateTime  @default(now())
+  isRead         Boolean   @default(false)
+
+  conversationId Int
+  senderId       Int
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  sender       Users        @relation("sentMessages", fields: [senderId], references: [id])
+
+  @@index([conversationId])
+}
+
+model Notification {
+  id          Int       @id @default(autoincrement())
+  userId      Int       
+  actorId     Int       
+  type        String    
+  postId      Int?       
+  commentId   Int?      
+  createdAt   DateTime  @default(now())
+  read        Boolean   @default(false)
+
+  // Relations with explicit names and back-relations
+  user        Users     @relation("notificationsReceived", fields: [userId], references: [id])
+  actor       Users     @relation("notificationsSent", fields: [actorId], references: [id])
+  post        Post?     @relation("postNotifications", fields: [postId], references: [id])
+  comment     Comment?  @relation("commentNotifications", fields: [commentId], references: [id])
+}
+model CommentLike {
+  userId    Int
+  commentId Int
+  createdAt DateTime @default(now())
+
+  user      Users   @relation(fields: [userId], references: [id], onDelete: Cascade, name: "UserCommentLikes")
+  comment   Comment @relation(fields: [commentId], references: [id], onDelete: Cascade, name: "CommentCommentLikes")
+
+  @@id([userId, commentId])
+  @@index([commentId])
 }

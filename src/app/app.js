@@ -8,12 +8,23 @@ const { PrismaPg } =require('@prisma/adapter-pg') ;
 const adapter=new PrismaPg({
     connectionString: process.env.DATABASE_URL
 });
+const socketHandler=require('../app/routes/socket.js');
+
 
 const passport=require('./passport.js')
 const cors=require('cors');
 const app=express();
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(server, {
+  cors:{
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST"]
+  }
+});
+module.exports={io};
 const routes=require('./routes/router.js');
-
 
 app.use(cors());
 app.use(express.json());
@@ -38,9 +49,10 @@ app.use(
 );
 app.use(passport.session());
 app.use('/', routes);
+socketHandler(io);
 
 
-app.listen(3000, (err)=>{
+server.listen(3000, (err)=>{
     if(err){
         throw err;
     }

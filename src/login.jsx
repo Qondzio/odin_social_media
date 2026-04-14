@@ -1,9 +1,8 @@
-import loginImage from './assets/images/login_image.png'
+import loginImage from './assets/images/login-image.png'
 import websiteLogo from './assets/images/logo.png'
 import errorIcon from './assets/images/error-icon.svg'
 import loadingIcon from './assets/images/loading-icon.svg'
 import checkIcon from './assets/images/check-icon.svg'
-import checkIfLogged from './app/controllers/checkIfLogged.js';
 import './assets/css/login.css'
 import { useEffect, useState } from 'react'
 import Footer from './footer.jsx'
@@ -21,8 +20,8 @@ function Login(){
 
     useEffect(()=>{
         (async function loadLogin(){
-            const result=await checkIfLogged();
-            if(result){
+            const result=await fetch('/api/checkIfLogged');              
+            if(result.ok){
                 navigate('/home')
             }
             else{
@@ -64,7 +63,7 @@ function Login(){
                     <div className='login_left'>
                         <div className='login_left_text'>
                             <img src={websiteLogo} alt="website_logo" />
-                            <h1>Search exactly what are you <span>looking for</span>.</h1>
+                            <h1>Stay <span>connected</span> through daily moments.</h1>
                         </div>
                         <div className='login_left_image'>
                             <img src={loginImage} alt="login_image"/>

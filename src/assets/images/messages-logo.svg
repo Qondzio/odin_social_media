@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 58 58" xml:space="preserve">
-<g>
-	<path style="fill:#EBBA16;" d="M44,18.394v21.141c0,2.722-2.207,4.929-4.929,4.929L22,44.535l-10,11v-11H4.929
-		C2.207,44.535,0,42.328,0,39.606l0-21.141c0-2.722,2.207-4.929,4.929-4.929l34.141-0.071C41.793,13.465,44,15.672,44,18.394z"/>
-	<path style="fill:#FFFFFF;" d="M22,24.465H9c-0.553,0-1-0.448-1-1s0.447-1,1-1h13c0.553,0,1,0.448,1,1S22.553,24.465,22,24.465z"/>
-	<path style="fill:#FFFFFF;" d="M35,30.465H9c-0.553,0-1-0.448-1-1s0.447-1,1-1h26c0.553,0,1,0.448,1,1S35.553,30.465,35,30.465z"/>
-	<path style="fill:#FFFFFF;" d="M35,36.465H9c-0.553,0-1-0.448-1-1s0.447-1,1-1h26c0.553,0,1,0.448,1,1S35.553,36.465,35,36.465z"/>
-	<path style="fill:#FC852E;" d="M53.071,2.535l-34.141-0.07C16.207,2.465,14,4.672,14,7.394v6.122l25.071-0.052
-		c2.722,0,4.929,2.207,4.929,4.93v18.441l7,7.7v-11h2.071c2.722,0,4.929-2.207,4.929-4.929V7.465
-		C58,4.742,55.793,2.535,53.071,2.535z"/>
-</g>
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 -1.3 20 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g id="SVGRepo_iconCarrier"> <title>messages_chat [#ffffff]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -999.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M97.1784026,840.884344 C92.8882915,837.134592 86.2359857,839.256228 84.7592414,844.817545 C84.139128,847.151543 84.7373784,848.235292 84.7373784,849.987037 C84.7373784,851.787636 84,854.395812 84,854.395812 C84,854.714855 84.2832249,855.025921 84.6320386,854.935194 C85.8792217,854.609172 87.8627895,853.964107 90.2349218,854.608175 C98.2119249,856.770688 103.330841,846.261214 97.1784026,840.884344 M103.447113,859 C103.395437,859 103.341773,858.993021 103.287115,858.979063 C96.9806421,857.395812 97.4039887,859.174477 93.8999507,858.237288 C92.8395967,857.954137 91.8746446,857.443669 91.0418642,856.781655 C97.4059763,857.561316 102.710728,852.016948 101.771614,845.487535 C102.732591,846.487535 103.438169,847.72582 103.7363,849.11266 C104.584981,853.048852 102.430484,852.38285 103.983749,858.364905 C104.075176,858.714855 103.765119,859 103.447113,859" id="messages_chat-[#ffffff]"> </path> </g> </g> </g> </g>
+
 </svg>

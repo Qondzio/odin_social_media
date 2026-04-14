@@ -19,8 +19,32 @@
     padding: 1rem;
     background-color: #252728;
 }
-.profile-info img{
+#profile-avatar-logged, #profile-avatar{
+    position: relative;
+    border-radius: 50%;
+}
+#avatar-icon-logged{
     width: 200px;
+    height: 200px;
+    object-fit:cover;
+    object-position: center;
+    border-radius: 50%;
+}
+#profile-avatar-logged:hover #avatar-icon-logged{
+    opacity: 0.4;
+    cursor: pointer;
+}
+#profile-avatar-logged:hover #change-avatar-icon{
+    opacity: 1;
+    cursor: pointer;
+}
+#change-avatar-icon{
+    width: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
 }
 .profile-info-details{
     display: flex;
@@ -32,6 +56,7 @@
 .profile-info-details #name p{
     font-size: 1.4rem;
     font-weight: 700;
+    text-transform: capitalize;
 }
 .profile-info-details span{
     display: flex;
@@ -100,5 +125,37 @@
     margin-bottom: 0;
     border-bottom: 1px solid #383a3b;
     background-color: #252728;
+    margin-bottom: 1rem;
+}
+.user-error{
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+.user-error p{
+    font-size: 1rem;
+}
+#unfollow{
+    background-color: #1ca709;
+    border: none;
+    padding: 10px 0;
+    color: white;
+    border-radius: 20px;
+    width: 100%;
+    position: relative;
+}
+#unfollow:hover{
+    background-color: #b9092f;
+    color: transparent;
+}
+#unfollow:hover::after{
+    content: "Unfollow";
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.create-post-on-profile{
     margin-bottom: 1rem;
 }

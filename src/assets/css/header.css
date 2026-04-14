@@ -10,6 +10,11 @@ header{
 }
 header img{
     width: 40px;
-    height: auto;
+    height: 40px;
     cursor: pointer;
+}
+header #header-user-avatar{
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
 }

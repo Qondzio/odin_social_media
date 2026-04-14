@@ -42,7 +42,7 @@ function SignUp(){
             <div className='signup-container'>
                 <img src={returnIcon} alt="return-icon" width={'16px'} height={'16px'} id='logo' onClick={()=>navigate('/')}/>
                 <div className='header'>
-                    <h3>Try to use Koobie</h3>
+                    <h3>Get started on Koobie</h3>
                     <p>Create an account to connect with friends, family, and communities of people who share your interests.</p>
                     {errors && 
                     <div className='errors'>
@@ -80,7 +80,7 @@ function SignUp(){
                     </div>
                     <span className='buttons'>
                         <button type='submit' id={loading ? 'loginButtonLoading' : 'sign-up'} onClick={signUpUser}>
-                            {loading ? <img id='loading-icon' src={loadingIcon} alt="loading-icon" /> : 'Sign up'}
+                            
                         </button>
                         <button type='button' id='sign-in' onClick={()=>navigate('/')}>I already have an account</button>
                     </span>

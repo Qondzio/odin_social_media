@@ -1,24 +1,206 @@
-.message{
+.messages-main{
     display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    margin-top: 5px;
+}
+.messages-sidebar, .messages-find-user, .conversations{
+    display: flex;
+    flex-direction: column;
+}
+.messages-sidebar{
+    flex: 0 0 25%;
+    border-right: 1px solid #383a3b;
+    box-sizing: border-box;
+}
+.messages-sidebar .messages-find-user .found-user{
+    padding: 0.5rem;
+}
+.messages-sidebar .search{
+    padding: 1rem 0;
+}
+.messages-sidebar .found-user img{
+    width: 40px;
+    height: 40px;
+}
+.messages-sidebar .activity, .messages-sidebar .activity-active{
     align-items: center;
 }
-.message:hover{
+.messages-sidebar #activity-user{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.messages-sidebar #founded-user-name{
+    text-transform: capitalize;
+}
+.message{
+    flex: 0 0 75%;
+    height: calc(100vh - 51px - 53px);
+}
+.conversations{
+    overflow-y: auto;
+    height: calc(100vh - 51px - 53px - 71px);
+}
+.select-a-message{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.select-a-message p{
+    width: 100%;
+    font-size: 1rem;
+}
+#logged-user-logo{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.message-user-details{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 10px;
+    border-bottom: 1px solid #383a3b;
+    border-right: 1px solid #383a3b;
+}
+.message-user-details p{
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+#message-user-logo{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+}
+.message-content{
+    height: 100%;
+    border-right: 1px solid #383a3b;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end;
+    padding: 1rem;
+    gap: 2px;
+    overflow-y: auto;
+}
+.message-content span p{
+    background-color: #505af3;
+    color: white;
+    padding: 0.5rem 0.7rem;
+    border-radius: 1rem;
+    max-width: 300px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.message-content #message-notmy p{
+    background-color: #383a3b;
+}
+.message-content #message-notmy{
+    justify-content: left;
+}
+.message-content span{
+    display: flex;
+}
+.message-content #message-my{
+    justify-content: right;
+}
+.message-answer {
+    padding: 1rem;
+    border-right: 1px solid #383a3b;
+}
+.message-answer form{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border: 1px solid #383a3b;
+    border-radius: 1.5rem;
+}
+.message-answer textarea {
+    width: 100%;
+    max-height: 6rem;
+    margin: 0;
+    padding: 0.8rem 0.2rem 0.8rem 1rem;
+    box-sizing: border-box;
+    background-color: #1c1c1d;
+    outline: none;
+    resize: none;
+    field-sizing: content;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: white;
+    border: 0;
+    border-radius: 1.5rem;
+}
+.message-answer button{
+    background-color: transparent;
+    border: 0;
+    padding: 0.4rem 1.2rem;
+    border-radius: 1.5rem;
+    background-color: #6c4df7;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+.message-answer button:hover{
+    background-color: #512df1;
+}
+.message-answer form span{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.message-answer button img{
+    width: 20px;
+    height: 20px;
+}
+#lastUser, #lastUserNotSeen{
+    text-transform: capitalize;
+    font-size: 0.9rem;
+}
+#lastUserNotSeen{
+    font-weight: 500;
+}
+#lastMessageNotSeen{
+    color: white;
+    font-weight: 500;
+}
+#sentAgo, #lastMessage{
+    color: #c4c4c4;
+}
+.activity, .activity-active{
+    display: flex;
+    padding: 1rem;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+.activity-active, .activity-active:hover{
+    background-color: rgba(108, 77, 247, 0.3);
+    cursor: pointer;
+}
+.activity:hover{
     background-color: #333334;
     cursor: pointer;
     border-radius: 10px;
 }
-.message span{
+.activity-user{
+    position: relative;
+}
+.activity span, .activity-active span{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.message #message-user{
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-.message #message-text{
-    color: #919498;
+#activity-user{
+    width: 64px;
+    display: block;
 }
